@@ -1,245 +1,299 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="desription" content="2Q Portfolio" />
-      <meta name="keywords" content="2Q, Portfolio, Projects, Web Development" />
-      <meta name="author" content="Colleen Dela Rosa" />
-      
-      <title>ENHYPEN Achievements</title>
-      <link rel="stylesheet" href="styles.css">
-      <link rel = "icon" href = "./assets/fukoro.jpg" type = "image/jpg">
-      <script src="script.js" defer></script>
-    <body>
-      <h1>A Guide To Enhypen</h1>
-      <h2>by Mg08, Mg07, Mg27, Mg30</h2>
-    <header>
-        <div class="hero-text">
-             <h1>ENHYPEN</h1>
-            <h2>—> Achievements • Milestones • Legacy</h2>
-        </div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ENHYPEN Achievements and Milestones">
+  <meta name="author" content="C Dela Rosa">
+  <title>A Guide to Enhypen</title>
 
-        <nav>
-            <ul>
-                <li><a href="#achievements">Achievements</a></li>
-                <li><a href="#tours">Tours</a></li>
-                <li><a href="#collabs">Collaborations</a></li>
-                <li><a href="#members">Member Highlights</a></li>
-                <li><a href="#timeline">Timeline</a></li>
-            </ul>
-        </nav>
-    </header>
+  <link rel="stylesheet" href="ach_style.css">
+  <link rel="icon" href="../assets/enha.jpg" type="image/jpg">
 
-    <main>
-        <section id="achievements" class="section">
-            <h2>Major Achievements</h2>
-            <p>
-                ENHYPEN has risen from promising rookies to global icons. Their music, artistry, and teamwork have earned them recognition from fans and prestigious institutions around the world.
-                From record-breaking album sales and chart-topping releases to historic award wins and sold-out world tours, the group continues to redefine what it means to be a next-generation K-pop powerhouse.
-                Their consistency, innovation, and connection with ENGENEs across continents have solidified their place among the most influential global artists of their era.
-            </p>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
 
-            <h1>Milestones Table</h1>
+<style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-<table border="1" cellpadding="8">
-    <thead>
+    body {
+      font-family: "Poppins", sans-serif;
+      background-color: #000;
+      color: #fff;
+      line-height: 1.6;
+      overflow-x: hidden;
+      text-align: center;
+    }
+
+    /* === HEADER === */
+    header {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 6%;
+      background: rgba(0, 0, 0, 0.25); /* semi-transparent */
+      backdrop-filter: blur(6px);
+      z-index: 10;
+    }
+
+    .header-left h1 {
+      font-family: 'EarthOrbiter', sans-serif;
+      font-size: 1.8rem;
+      color: #ffb3c6;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    nav {
+      display: flex;
+      gap: 25px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: all 0.3s ease;
+      letter-spacing: 0.5px;
+    }
+
+    nav a:hover {
+      color: #ffb3c6;
+      text-shadow: 0 0 6px #ffb3c6;
+    }
+
+    /* === TOP BACKGROUND IMAGE === */
+    .top-banner {
+      background: url("../assets/ach_enha.webp") center/cover no-repeat;
+      height: 65vh;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: end;
+      padding-bottom: 40px;
+      text-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+    }
+
+    .top-banner h2 {
+      font-family: 'EarthOrbiter', sans-serif;
+      font-size: 2.8rem;
+      color: #fff;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 12px 25px;
+      border-radius: 10px;
+    }
+
+    /* === MAIN === */
+    main {
+      padding: 60px 8%;
+    }
+
+    h2.section-title {
+      font-family: 'EarthOrbiter', sans-serif;
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #ffb3c6;
+    }
+
+    p.intro {
+      max-width: 800px;
+      margin: 0 auto 40px auto;
+      font-size: 1rem;
+      line-height: 1.8;
+      color: #ddd;
+    }
+
+    /* === MEDIA SECTION === */
+    .media-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+      margin: 40px 0 70px 0;
+    }
+
+    .media-section img {
+      width: 420px;
+      border-radius: 15px;
+      border: 1px solid #333;
+    }
+
+    iframe {
+      width: 420px;
+      height: 236px;
+      border-radius: 15px;
+      border: 1px solid #333;
+    }
+
+    /* === TABLE === */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 50px auto;
+      max-width: 900px;
+      border: 1px solid #333;
+    }
+
+    th, td {
+      border: 1px solid #333;
+      padding: 12px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #111;
+      color: #ffb3c6;
+      font-weight: bold;
+    }
+
+    td {
+      background-color: #1a1a1a;
+      color: #eee;
+    }
+
+    /* === MEMBERS === */
+    .members-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 35px;
+      justify-items: center;
+      margin-top: 60px;
+      margin-bottom: 60px;
+    }
+
+    .member-card {
+      background: #111;
+      border: 1px solid #333;
+      border-radius: 20px;
+      padding: 25px;
+      max-width: 320px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      transition: transform 0.3s ease, border-color 0.3s ease;
+    }
+
+    .member-card:hover {
+      transform: translateY(-5px);
+      border-color: #ffb3c6;
+    }
+
+    .member-card h3 {
+      font-family: 'EarthOrbiter', sans-serif;
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+      color: #ffb3c6;
+    }
+
+    .member-card p {
+      font-size: 0.95rem;
+      color: #ccc;
+    }
+
+    /* === FOOTER === */
+    footer {
+      background-color: #111;
+      padding: 25px 10px;
+      border-top: 1px solid #333;
+      color: #bbb;
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: #ffb3c6;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="top-boxes">
+      <div class="box"><a href="../index.html?v=2">Home</a></div>
+      <div class="box"><a href="main_page.html?v=2">Main</a></div>
+      <div class="box"><a href="2Q1GMagnesiumCruz.html">i-Land Life</a></div>
+      <div class="box"><a href="https://en.wikipedia.org/wiki/Enhypen">Lore to Songs & Albums</a></div>
+      <div class="box"><a href="2Q1MgDelaRosa.html" class="active">Achievements</a></div>
+    </div>
+    
+  </header>
+  <main>
+    <section id="achievements" class="section">
+      <h1 class="page-title">ENHYPEN ACHIEVEMENTS & MILESTONES</h1>
+      <p class="intro">
+        ENHYPEN has risen from promising rookies to global icons. Their music, artistry, and teamwork
+        have earned them recognition from fans and institutions worldwide. From record-breaking album
+        sales and chart-topping releases to historic award wins and sold-out world tours, the group
+        continues to redefine what it means to be a next-generation K-pop powerhouse.
+      </p>
+
+    <div class="media-section">
+      <img src="../assets/enchella.webp" alt="ENHYPEN at Coachella">
+      <iframe src="https://www.youtube.com/embed/pDzNM7fYNZc?si=-q_uQ_oVw_pO3Rfy"
+        title="ENHYPEN Coachella Performance" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+      </iframe>
+    </div>
+
+    <table>
+      <thead>
         <tr>
-            <th rowspan="2">Year</th>
-            <th colspan="2">Major Achievements</th>
+          <th>Year</th>
+          <th>Award / Record</th>
+          <th>Description</th>
         </tr>
-        <tr>
-            <th>Award/Record</th>
-            <th>Description</th>
-        </tr>
-    </thead>
+      </thead>
+      <tbody>
+        <tr><td>2020</td><td>Rookie of the Year</td><td>MAMA, MMA, Golden Disc, and more</td></tr>
+        <tr><td>2021</td><td>Billboard 200 Debut</td><td>#11 for "DIMENSION: DILEMMA"</td></tr>
+        <tr><td>2021</td><td>TIME Next Generation Leaders</td><td>Recognized by TIME Magazine</td></tr>
+        <tr><td>2022</td><td>Million-Seller Album</td><td>"MANIFESTO: DAY 1" sold 1.2M+ in 1st week</td></tr>
+        <tr><td>2023</td><td>Prada Global Ambassadors</td><td>First 4th-gen group with this title</td></tr>
+        <tr><td>2024</td><td>Coachella Performance</td><td>Youngest K-pop group to perform</td></tr>
+        <tr><td>2025</td><td>10 Million Career Sales</td><td>Surpassed 10M total physical albums</td></tr>
+      </tbody>
+    </table>
 
-    <tbody>
-        <!-- 2020 -->
-        <tr>
-            <td rowspan="2">2020</td>
-            <td>Rookie of the Year</td>
-            <td>MAMA, MMA, Golden Disc, and more</td>
-        </tr>
-        <tr>
-            <td>Fastest-Selling Rookie Album</td>
-            <td>"BORDER: DAY ONE" sold 280k+ in the first week</td>
-        </tr>
+    <h2 class="section-title">Members & Individual Achievements</h2>
+    <div class="members-grid">
+      <div class="member-card"><h3>JUNGWON</h3><p>Invited to join Recording Academy 2025; praised for leadership and charisma.</p></div>
+      <div class="member-card"><h3>HEESEUNG</h3><p>Main vocal; recognized for live stage excellence and composition skills.</p></div>
+      <div class="member-card"><h3>JAY</h3><p>Global fashion figure; featured in major brand editorials and campaigns.</p></div>
+      <div class="member-card"><h3>JAKE</h3><p>Brand ambassador for Tiffany & Co.; songwriting and lyric contributions.</p></div>
+      <div class="member-card"><h3>SUNGHOON</h3><p>Model for Hince; admired for visuals and elegant performance style.</p></div>
+      <div class="member-card"><h3>SUNOO</h3><p>Global ambassador for “8 Seconds”; known for charm and engagement.</p></div>
+      <div class="member-card"><h3>NI-KI</h3><p>Main dancer; viral choreography and “Artist of the Month” recognition.</p></div>
+    </div>
 
-        <!-- 2021 -->
-        <tr>
-            <td rowspan="2">2021</td>
-            <td>Billboard 200 Debut</td>
-            <td>#11 for "DIMENSION: DILEMMA", first 4th-gen group to achieve this</td>
-        </tr>
-        <tr>
-            <td>TIME Next Generation Leaders</td>
-            <td>Named by TIME Magazine as rising global stars</td>
-        </tr>
+    <p>Their consistency, innovation, and connection with ENGENEs across continents have solidified their place</p>
+    <p>among the most influential global artists of their era.</p>
+  </main>
 
-        <!-- 2022 -->
-        <tr>
-            <td rowspan="2">2022</td>
-            <td>Million-Seller Album</td>
-            <td>"MANIFESTO: DAY 1" sold 1.2M+ in first week</td>
-        </tr>
-        <tr>
-            <td>1st World Tour</td>
-            <td>Sold-out shows in Korea, U.S., and Japan</td>
-        </tr>
-
-        <!-- 2023 -->
-        <tr>
-            <td rowspan="2">2023</td>
-            <td>Prada Ambassadors</td>
-            <td>First 4th-gen K-pop group to become global fashion ambassadors</td>
-        </tr>
-        <tr>
-            <td>"DARK BLOOD" Billboard 200 Peak</td>
-            <td>Debuted at #4 on Billboard 200, charting in 30+ countries</td>
-        </tr>
-
-        <!-- 2024 -->
-        <tr>
-            <td rowspan="2">2024</td>
-            <td>Coachella Performance</td>
-            <td>Youngest K-pop boy group to perform at Coachella</td>
-        </tr>
-        <tr>
-            <td>6x Oricon #1 Albums</td>
-            <td>Record-breaking consecutive #1 albums in Japan</td>
-        </tr>
-
-        <!-- 2025 -->
-        <tr>
-            <td rowspan="2">2025</td>
-            <td>10 Million Career Sales</td>
-            <td>Surpassed 10 million total physical album sales</td>
-        </tr>
-        <tr>
-            <td>Seoul Music Awards Bonsang</td>
-            <td>Won "Artist of the Year" at the 2025 SMA</td>
-        </tr>
-    </tbody>
-</table>
-            <br>
-            <div class="media-block">
-                <img src="../assets/enchella.webp" alt="ENHYPEN performing at Coachella" width="560" height="315" />
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/pDzNM7fYNZc?si=ewBowX5VHxpUl6cH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-        </section>
-
-        <section id="tours" class="section">
-            <h2>World Tours</h2>
-            <p>ENHYPEN’s global tours prove their influence across continents and cultures.</p>
-            <ul>
-                <li><strong>2022–2023:</strong> Manifesto Tour — Asia, U.S., Japan</li>
-                <li><strong>2024:</strong> Romance: Untold Tour — 15 countries worldwide</li>
-                <li><strong>2025:</strong> Seoul Encore — celebrating 10M album sales</li>
-            </ul>
-        </section>
-
-        <section id="collabs" class="section">
-            <h2>Collaborations</h2>
-            <p>ENHYPEN continues to expand their artistry through iconic collaborations:</p>
-            <ul>
-                <li>🎵 Special stage with BTS’ Jungkook – *“Criminal Love”*</li>
-                <li>🕶️ Global ambassadors for Prada (since 2023)</li>
-                <li>🎬 Featured in Webtoon *Dark Moon* OST and storyline</li>
-            </ul>
-        </section>
-
-      
-<section id="members" class="section">
-  <h2>Members & Individual Achievements</h2>
-  <p>
-    ENHYPEN's seven members — <strong>Jungwon, Heeseung, Jay, Jake, Sunghoon, Sunoo,</strong>
-    and <strong>Ni-ki</strong> — have not only built the group's collective legacy but have
-    also achieved notable individual milestones in music, fashion, philanthropy, and media.
-  </p>
-
-  <ul>
-    <li>
-      <strong>Jungwon</strong>
-      <ul>
-        <li>Leader known for strong stage presence and consistent performance quality.</li>
-        <li>Invited to join the Recording Academy's 2025 new member class (recognition by the Recording Academy).</li>
-        <li>Featured frequently in major interviews about ENHYPEN's global strategy and social-media-driven debut.</li>
-      </ul>
-    </li>
-
-    <li>
-      <strong>Heeseung</strong>
-      <ul>
-        <li>Lead vocal powerhouse — many live covers and solo performances (popular covers on Weverse and YouTube).</li>
-        <li>Participated in high-profile collaboration and special stages; received strong fan-voted accolades for vocal/performances.</li>
-        <li>Has been linked to brand/endorsement activities in fashion and accessories (solo ambassadorships reported in fan & press coverage).</li>
-      </ul>
-    </li>
-
-    <li>
-      <strong>Jay</strong>
-      <ul>
-        <li>Secured a top position in the I-Land finale to debut with ENHYPEN (I-Land voting placement).</li>
-        <li>Recognized for fashion-forward appearances and editorial spreads; participates in group brand campaigns and fashion events.</li>
-      </ul>
-    </li>
-
-    <li>
-      <strong>Jake</strong>
-      <ul>
-        <li>High vote totals in I-Land (helped secure his debut spot) and strong fan engagement internationally.</li>
-        <li>Songwriting/composition credits on ENHYPEN releases (credited on album tracks such as those on <em>MANIFESTO: DAY 1</em> / other releases).</li>
-        <li>Appointed (with Sunghoon) as a "Friends of the House" ambassador for brands like Tiffany & Co. in certain markets (joint ambassadorships reported via press/fan pages).</li>
-      </ul>
-    </li>
-
-    <li>
-      <strong>Sunghoon</strong>
-      <ul>
-        <li>Former professional figure skater — brings unique stage elegance and precision to performances.</li>
-        <li>Solo endorsements and modeling: announced as a model/endorser for beauty/cosmetics brands (e.g., Hince) and other brand tie-ins in 2024–2025.</li>
-        <li>Appeared in fashion editorials and brand campaigns; often paired with other members for luxury brand collaborations.</li>
-      </ul>
-    </li>
-
-    <li>
-      <strong>Sunoo</strong>
-      <ul>
-        <li>Known as the group's mood-maker and strong visual presence with high fan-engagement metrics.</li>
-        <li>Named global ambassador for fashion brand <em>8 Seconds</em> (campaign: “ENHYPEN SUNOO’s Summer Record”) — brand campaign and editorial released 2025.</li>
-        <li>Active in charity and fan-driven donations; recognized in brand-reputation lists and artist-of-the-month features.</li>
-      </ul>
-    </li>
-
-    <li>
-      <strong>Ni-ki</strong>
-      <ul>
-        <li>Main dancer and performance specialist — widely praised for choreography and stage charisma.</li>
-        <li>Named an Artist of the Month / featured performance series (2024–2025 artist showcases and choreography features).</li>
-        <li>Popular for dance practice uploads and viral choreography clips which drove social engagement.</li>
-      </ul>
-    </li>
-  </ul>
-
-  <p>
-    <em>Collectively</em>, the members have expanded ENHYPEN's reach through:
-    brand ambassadorships (Prada, Tiffany & Co. features, cosmetic & fashion endorsements),
-    solo media appearances, songwriting credits, and charitable activities — all contributing
-    to the group's multi-dimensional success.
-  </p>
-</section>
-
-        <section id="timeline" class="section">
-            <h2>Timeline of Success</h2>
-            <p>Watch ENHYPEN’s journey unfold year by year:</p>
-            <div id="timeline-box"></div>
-        </section>
-    </main>
-
-    <footer>
-        <p>© 2025 ENHYPEN Fan Project | <a href="https://beliftlab.com/" target="_blank">BELIFT LAB</a> | 
-            <a href="https://weverse.io/enhypen" target="_blank">Weverse</a></p>
-    </footer>
+  <footer>
+    <p>© 2025 C Dela Rosa |
+      <a href="https://beliftlab.com/" target="_blank">BELIFT LAB</a> |
+      <a href="https://weverse.io/enhypen" target="_blank">Weverse</a>
+    </p>
+  </footer>
 </body>
 </html>
+
