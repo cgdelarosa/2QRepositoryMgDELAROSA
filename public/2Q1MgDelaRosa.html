@@ -13,232 +13,9 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 
-<style>
-    @font-face {
-  font-family: 'EarthOrbiter';
-  src: url('/assets/EarthOrbiterXtraBold.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
-
-/* === RESET === */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* === BODY === */
-body {
-  font-family: 'Roboto', sans-serif; /* main content uses Roboto */
-  background-color: #000;
-  color: #fff;
-  line-height: 1.6;
-  overflow-x: hidden;
-}
-
-/* === HEADER === */
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(255, 179, 198, 0.25);
-  z-index: 100;
-  padding: 20px 0;
-  display: flex;
-  justify-content: center;
-}
-
-.top-nav {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 40px;
-}
-
-/* === NAV LINKS === */
-.top-nav a {
-  color: #fff;
-  text-decoration: none;
-  font-family: 'EarthOrbiter', sans-serif; /* special font */
-  font-size: 1rem;
-  letter-spacing: 1.2px;
-  padding: 10px 20px;
-  transition: all 0.3s ease;
-  position: relative;
-}
-
-/* Futuristic hover underline */
-.top-nav a::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  width: 0%;
-  height: 2px;
-  background-color: #ffb3c6;
-  transform: translateX(-50%);
-  transition: all 0.3s ease;
-}
-
-.top-nav a:hover::after {
-  width: 100%;
-}
-
-.top-nav a:hover {
-  color: #ffb3c6;
-  text-shadow: 0 0 10px #ffb3c6;
-}
-
-.top-nav a.active {
-  color: #ffb3c6;
-  text-shadow: 0 0 12px #ffb3c6;
-}
-
-/* === PAGE TITLE === */
-.page-title {
-  font-family: 'EarthOrbiter', sans-serif;
-  font-size: 2.5rem;
-  color: #ffb3c6;
-  margin-top: 120px;
-  margin-bottom: 15px;
-  letter-spacing: 1px;
-  text-align: center;
-}
-
-/* === INTRO TEXT === */
-.intro {
-  font-family: 'Roboto', sans-serif;
-  font-size: 1rem;
-  max-width: 800px;
-  margin: 10px auto 50px auto;
-  color: #ddd;
-  line-height: 1.8;
-  text-align: center;
-}
-
-/* === MEDIA SECTION === */
-.media-section {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
-  margin: 40px 0 70px 0;
-}
-
-.media-section img {
-  width: 420px;
-  border-radius: 15px;
-  border: 1px solid #333;
-}
-
-iframe {
-  width: 420px;
-  height: 236px;
-  border-radius: 15px;
-  border: 1px solid #333;
-}
-
-/* === TABLE === */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 50px auto;
-  max-width: 900px;
-  border: 1px solid #333;
-}
-
-th, td {
-  border: 1px solid #333;
-  padding: 12px;
-  text-align: center;
-}
-
-th {
-  background-color: #111;
-  color: #ffb3c6;
-  font-weight: bold;
-  font-family: 'EarthOrbiter', sans-serif;
-}
-
-td {
-  background-color: #1a1a1a;
-  color: #eee;
-  font-family: 'Roboto', sans-serif;
-}
-
-/* === MEMBERS SECTION === */
-.members-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 35px;
-  justify-items: center;
-  margin-top: 60px;
-  margin-bottom: 60px;
-}
-
-.member-card {
-  background: #111;
-  border: 1px solid #333;
-  border-radius: 20px;
-  padding: 25px;
-  max-width: 320px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  transition: transform 0.3s ease, border-color 0.3s ease;
-}
-
-.member-card:hover {
-  transform: translateY(-5px);
-  border-color: #ffb3c6;
-  box-shadow: 0 0 15px rgba(255, 179, 198, 0.25);
-}
-
-.member-card h3 {
-  font-family: 'EarthOrbiter', sans-serif;
-  font-size: 1.3rem;
-  margin-bottom: 10px;
-  color: #ffb3c6;
-}
-
-.member-card p {
-  font-family: 'Roboto', sans-serif;
-  font-size: 0.95rem;
-  color: #ccc;
-}
-
-/* === FOOTER === */
-footer {
-  background-color: #111;
-  padding: 25px 10px;
-  border-top: 1px solid #333;
-  color: #bbb;
-  font-size: 0.9rem;
-  text-align: center;
-  font-family: 'Roboto', sans-serif;
-}
-
-footer a {
-  color: #ffb3c6;
-  text-decoration: none;
-}
-
-footer a:hover {
-  text-decoration: underline;
-}
-</style>
 </head>
 
 <body>
@@ -290,7 +67,7 @@ footer a:hover {
       </tbody>
     </table>
 
-    <h2 class="section-title">Members & Individual Achievements</h2>
+    <h2 class="section-title">Members & Individual Achievements text</h2>
     <div class="members-grid">
       <div class="member-card"><h3>JUNGWON</h3><p>Invited to join Recording Academy 2025; praised for leadership and charisma.</p></div>
       <div class="member-card"><h3>HEESEUNG</h3><p>Main vocal; recognized for live stage excellence and composition skills.</p></div>
@@ -301,8 +78,10 @@ footer a:hover {
       <div class="member-card"><h3>NI-KI</h3><p>Main dancer; viral choreography and “Artist of the Month” recognition.</p></div>
     </div>
 
-    <p>Their consistency, innovation, and connection with ENGENEs across continents have solidified their place</p>
-    <p>among the most influential global artists of their era.</p>
+    <p class="closing-statement">
+  Their consistency, innovation, and connection with ENGENEs across continents have solidified their place among the most influential global artists of their era.
+  </p>
+    
   </main>
 
   <footer>
@@ -313,4 +92,3 @@ footer a:hover {
   </footer>
 </body>
 </html>
-
