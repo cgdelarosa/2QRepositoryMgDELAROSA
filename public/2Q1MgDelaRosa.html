@@ -17,211 +17,228 @@
 </head>
 
 <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    @font-face {
+  font-family: 'EarthOrbiter';
+  src: url('/assets/EarthOrbiterXtraBold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 
-    body {
-      font-family: "Poppins", sans-serif;
-      background-color: #000;
-      color: #fff;
-      line-height: 1.6;
-      overflow-x: hidden;
-      text-align: center;
-    }
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 
-    /* === HEADER === */
-    header {
-      position: absolute;
-      top: 0;
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 6%;
-      background: rgba(0, 0, 0, 0.25); /* semi-transparent */
-      backdrop-filter: blur(6px);
-      z-index: 10;
-    }
+/* === RESET === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    .header-left h1 {
-      font-family: 'EarthOrbiter', sans-serif;
-      font-size: 1.8rem;
-      color: #ffb3c6;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-    }
+/* === BODY === */
+body {
+  font-family: 'Roboto', sans-serif; /* main content uses Roboto */
+  background-color: #000;
+  color: #fff;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
 
-    nav {
-      display: flex;
-      gap: 25px;
-    }
+/* === HEADER === */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 179, 198, 0.25);
+  z-index: 100;
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+}
 
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: 500;
-      font-size: 0.95rem;
-      transition: all 0.3s ease;
-      letter-spacing: 0.5px;
-    }
+.top-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
 
-    nav a:hover {
-      color: #ffb3c6;
-      text-shadow: 0 0 6px #ffb3c6;
-    }
+/* === NAV LINKS === */
+.top-nav a {
+  color: #fff;
+  text-decoration: none;
+  font-family: 'EarthOrbiter', sans-serif; /* special font */
+  font-size: 1rem;
+  letter-spacing: 1.2px;
+  padding: 10px 20px;
+  transition: all 0.3s ease;
+  position: relative;
+}
 
-    /* === TOP BACKGROUND IMAGE === */
-    .top-banner {
-      background: url("../assets/ach_enha.webp") center/cover no-repeat;
-      height: 65vh;
-      position: relative;
-      display: flex;
-      justify-content: center;
-      align-items: end;
-      padding-bottom: 40px;
-      text-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
-    }
+/* Futuristic hover underline */
+.top-nav a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0%;
+  height: 2px;
+  background-color: #ffb3c6;
+  transform: translateX(-50%);
+  transition: all 0.3s ease;
+}
 
-    .top-banner h2 {
-      font-family: 'EarthOrbiter', sans-serif;
-      font-size: 2.8rem;
-      color: #fff;
-      background: rgba(0, 0, 0, 0.5);
-      padding: 12px 25px;
-      border-radius: 10px;
-    }
+.top-nav a:hover::after {
+  width: 100%;
+}
 
-    /* === MAIN === */
-    main {
-      padding: 60px 8%;
-    }
+.top-nav a:hover {
+  color: #ffb3c6;
+  text-shadow: 0 0 10px #ffb3c6;
+}
 
-    h2.section-title {
-      font-family: 'EarthOrbiter', sans-serif;
-      font-size: 2rem;
-      margin-bottom: 20px;
-      color: #ffb3c6;
-    }
+.top-nav a.active {
+  color: #ffb3c6;
+  text-shadow: 0 0 12px #ffb3c6;
+}
 
-    p.intro {
-      max-width: 800px;
-      margin: 0 auto 40px auto;
-      font-size: 1rem;
-      line-height: 1.8;
-      color: #ddd;
-    }
+/* === PAGE TITLE === */
+.page-title {
+  font-family: 'EarthOrbiter', sans-serif;
+  font-size: 2.5rem;
+  color: #ffb3c6;
+  margin-top: 120px;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+  text-align: center;
+}
 
-    /* === MEDIA SECTION === */
-    .media-section {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-      gap: 30px;
-      margin: 40px 0 70px 0;
-    }
+/* === INTRO TEXT === */
+.intro {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  max-width: 800px;
+  margin: 10px auto 50px auto;
+  color: #ddd;
+  line-height: 1.8;
+  text-align: center;
+}
 
-    .media-section img {
-      width: 420px;
-      border-radius: 15px;
-      border: 1px solid #333;
-    }
+/* === MEDIA SECTION === */
+.media-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin: 40px 0 70px 0;
+}
 
-    iframe {
-      width: 420px;
-      height: 236px;
-      border-radius: 15px;
-      border: 1px solid #333;
-    }
+.media-section img {
+  width: 420px;
+  border-radius: 15px;
+  border: 1px solid #333;
+}
 
-    /* === TABLE === */
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 50px auto;
-      max-width: 900px;
-      border: 1px solid #333;
-    }
+iframe {
+  width: 420px;
+  height: 236px;
+  border-radius: 15px;
+  border: 1px solid #333;
+}
 
-    th, td {
-      border: 1px solid #333;
-      padding: 12px;
-      text-align: center;
-    }
+/* === TABLE === */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 50px auto;
+  max-width: 900px;
+  border: 1px solid #333;
+}
 
-    th {
-      background-color: #111;
-      color: #ffb3c6;
-      font-weight: bold;
-    }
+th, td {
+  border: 1px solid #333;
+  padding: 12px;
+  text-align: center;
+}
 
-    td {
-      background-color: #1a1a1a;
-      color: #eee;
-    }
+th {
+  background-color: #111;
+  color: #ffb3c6;
+  font-weight: bold;
+  font-family: 'EarthOrbiter', sans-serif;
+}
 
-    /* === MEMBERS === */
-    .members-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 35px;
-      justify-items: center;
-      margin-top: 60px;
-      margin-bottom: 60px;
-    }
+td {
+  background-color: #1a1a1a;
+  color: #eee;
+  font-family: 'Roboto', sans-serif;
+}
 
-    .member-card {
-      background: #111;
-      border: 1px solid #333;
-      border-radius: 20px;
-      padding: 25px;
-      max-width: 320px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      transition: transform 0.3s ease, border-color 0.3s ease;
-    }
+/* === MEMBERS SECTION === */
+.members-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 35px;
+  justify-items: center;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
 
-    .member-card:hover {
-      transform: translateY(-5px);
-      border-color: #ffb3c6;
-    }
+.member-card {
+  background: #111;
+  border: 1px solid #333;
+  border-radius: 20px;
+  padding: 25px;
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
 
-    .member-card h3 {
-      font-family: 'EarthOrbiter', sans-serif;
-      font-size: 1.3rem;
-      margin-bottom: 10px;
-      color: #ffb3c6;
-    }
+.member-card:hover {
+  transform: translateY(-5px);
+  border-color: #ffb3c6;
+  box-shadow: 0 0 15px rgba(255, 179, 198, 0.25);
+}
 
-    .member-card p {
-      font-size: 0.95rem;
-      color: #ccc;
-    }
+.member-card h3 {
+  font-family: 'EarthOrbiter', sans-serif;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #ffb3c6;
+}
 
-    /* === FOOTER === */
-    footer {
-      background-color: #111;
-      padding: 25px 10px;
-      border-top: 1px solid #333;
-      color: #bbb;
-      font-size: 0.9rem;
-    }
+.member-card p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.95rem;
+  color: #ccc;
+}
 
-    footer a {
-      color: #ffb3c6;
-      text-decoration: none;
-    }
+/* === FOOTER === */
+footer {
+  background-color: #111;
+  padding: 25px 10px;
+  border-top: 1px solid #333;
+  color: #bbb;
+  font-size: 0.9rem;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+}
 
-    footer a:hover {
-      text-decoration: underline;
-    }
-  </style>
+footer a {
+  color: #ffb3c6;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+</style>
 </head>
 
 <body>
