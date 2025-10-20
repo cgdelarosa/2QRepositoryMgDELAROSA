@@ -1,0 +1,41 @@
+.container img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    float: left;
+}
+
+    /* Style for anchor tags with target="_blank" */
+    a[target="_blank"] {
+        color: blue; /* Change text color to blue */
+    text-decoration: underline; /* Underline the text */
+    font-weight: bold; /* Make the text bold */
+}
+
+/* Style for anchor tags with href="/internal-page" */
+a[href="/internal-page"] {
+    color: green; /* Change text color to green */
+    text-decoration: none; /* Remove underline */
+    font-style: italic; /* Make the text italic */
+}
+
+a:hover {
+    color: red; /* Change text color to red */
+    text-decoration: underline; /* Underline the text */
+    font-weight: bold; /* Make the text bold */
+}
+
+.container ul {
+    list-style-type: none; /* Removes bullets */
+    clear: left; /* Removes effect of float:left */
+    padding: 0; /* Removes the spaces surrounding the li/s */
+}
+
+.container ul li {
+    width: 150px; /* Set width of each list item */
+    padding: 5px; /* Add padding inside each list item */
+    background-color: cornsilk; /* Set background color */
+    text-align: center; /* Center align text */
+    display: inline-block; /* Display list items inline */
+    border-radius: 0px 25px; /* Rounded corners */
+}
